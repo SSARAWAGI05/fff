@@ -3,16 +3,6 @@ import os
 import google.generativeai as genai
 
 def get_gemini_response(platform, gen, description):
-  """Generates content using the Gemini model, incorporating platform, content type, and description.
-
-  Args:
-      platform (str): The platform for the content (e.g., "YouTube", "Reddit").
-      gen (str): The type of content to generate (e.g., "Video Ideas", "Headlines").
-      description (str): A concise description of the desired content (2-3 sentences).
-
-  Returns:
-      str: The generated content in plain text format.
-  """
 
   prompt = f"Platform: {platform}\nContent Type: {gen}\nDescription: {description}"
   response = model.generate_content(prompt)
