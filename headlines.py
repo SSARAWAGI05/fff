@@ -9,7 +9,8 @@ def get_gemini_response(platform, gen, description):
   return response.text
 
 # Configure genai (assuming you have set the GOOGLE_API_KEY environment variable)
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+os.environ['GOOGLE_API_KEY'] = "AIzaSyADGSLvgZKlLMGHapzRTwMwnY_S3-yy0vw"
+genai.configure(api_key="AIzaSyADGSLvgZKlLMGHapzRTwMwnY_S3-yy0vw")
 model = genai.GenerativeModel("gemini-1.5-pro")
 
 st.title("HEADLINES AI")
